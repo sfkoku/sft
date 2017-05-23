@@ -1,0 +1,14 @@
+
+<ul class="user_info_list">
+  <li>名前 <%= @user.name %>      </li>
+  <li>学部 <%= @user.faculty %>   </li>
+  <li>学科 <%= @user.department %></li>
+  <li>学年 <%= @user.year %>      </li>
+  <li>email <%= @user.email %><br> </li>
+</ul>
+<%= link_to "edit", edit_user_path(params[:id]) %><br>
+<%= link_to "予約履歴", "#"%>
+<%= link_to(admin_session_path(params[:id]), :method =>"delete", :action => 'delete') do %>
+  <br>
+  <span>logout</span>
+<% end %>

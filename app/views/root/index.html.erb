@@ -1,0 +1,20 @@
+
+<div class="load_cover">
+  <div class="img_container">
+  </div>
+  <% flash.each do |key, value| %>
+      <%= content_tag(:div, value, class: "#{key}") %>
+   <% end %>
+  <div class="transparent_block">
+  </div>
+</div>
+<h3 class="logo"><img src="<%= asset_path("sft_logo3_1.png") %>" width="50" height="40" ></h3>
+<%= render :partial => "shared/book_list" , locals: {books: @books}%>
+<script>
+$(function(){
+    setTimeout(function(){
+      $('.load_cover').fadeOut('slow');
+    },900);
+ });
+</script>
+  

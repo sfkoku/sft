@@ -1,0 +1,52 @@
+// Place all the styles related to the books controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+.book_main{
+  height: 100%;
+  text-align: center;
+  img{
+    margin-top:20px;
+    width: 200px;
+    height: auto;
+  }
+  h2{
+    background: #1c91d0;
+    border-bottom: 1px solid #000;
+    color: #fff;
+    font-size: 20px;
+    line-height: 32px;
+  }
+  ul{
+    li{
+      font-size: 16px;    
+      padding: 3px 0;
+      box-sizing: border-box;
+    }
+    .title{
+      font-size: 20px;
+    }
+    .price{
+      font-size: 20px;
+      margin-bottom: 20px;
+    }
+  }
+}
+.submit{
+  font-family :'Yu Mincho',serif;
+  font-size: 16px; 
+  color: #fff;
+  padding: 10px 30px;
+  text-decoration: none;
+  background: #ec8e00;
+  border: none;
+  border-radius: 20px; 
+}
+.background_box{
+  z-index: -2;
+  background: #fff;
+  position: absolute;
+  top: 32px;
+  bottom: 0px;
+  right:0px;
+  left: 0px;
+}

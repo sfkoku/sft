@@ -1,0 +1,49 @@
+// Place all the styles related to the root controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+.book_list{
+  background: #e9e9e9;
+}
+
+.book_container{ 
+  padding: 10px 15px 0;
+  text-align: center;
+  box-sizing: border-box;
+  background: #e9e9e9;
+  .container{
+    width: 50%;
+    height: 255px;
+    border: 4px #e9e9e9 solid;
+    box-sizing: border-box;
+    margin: 0;
+    margin-right: 0px;
+    margin-left: 0px;
+    float: left;
+    background: #fff;
+    a{
+      box-sizing: border-box;
+      height: 150px;
+      text-decoration: none;
+      .img_container{
+        padding-top: 10px;
+        img{
+          width: 110px;
+          height: 165px;
+        }
+      }
+       h2{
+        font-size: 16px;
+        margin : 0;
+        color: #000; 
+      }
+    }
+  }
+  &::after{
+    content: "";
+    clear: both;
+    display: block;
+    width: auto;
+    height: auto;
+  }
+}

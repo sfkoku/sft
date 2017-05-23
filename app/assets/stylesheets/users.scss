@@ -1,0 +1,32 @@
+// Place all the styles related to the users controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+.user_form_title{
+  text-align: center;
+  font-weight: 400;
+}
+.user_new_form{
+     display: block;
+     margin: 0 auto;
+     text-align: center;
+   ul, li{
+     list-style: none;
+   }
+   input{
+   }
+   input#login-button {
+     display: block;
+     margin: 0 auto;
+  }
+   label{
+    float: left; 
+    width: 80px;
+}
+}
+
+.user_info_list{
+  list-style: none;
+  margin-top: 20px;
+}
+

@@ -1,0 +1,105 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ *= require font-awesome
+ */
+body,html{
+  margin: 0;
+  font-family: 'Hiragino Kaku Gothic Pro', 'ヒラギノ角ゴ Pro W3', "Meiryo", メイリオ, arial, helvetica, sans-serif;
+  font-weight: 400;
+}
+.logo{
+  background: #1c91d0; 
+  opacity: 0.9;
+}
+footer{
+  border-top: 1px #999 solid;
+  width: 100%;
+  height: 45px;
+  position: fixed;
+  bottom: 0;
+  background: #ec8e00;
+  padding-top: 5px;
+  .head_menu, .admin_footer{
+    list-style: none;
+    width: 100%;
+    padding: 0;
+    position: absolute;
+    bottom: 0;
+    margin: 0;
+    li{
+      color: black;
+      line-height: 20px;
+      width: 24%;
+      margin: 0;
+      text-align: center;
+      display: inline-block;
+      a{
+        color: #eee;
+        text-decoration: none;;
+        span{
+          font-size: 12px;
+        }
+        &:hover{
+          text-decoration: underline;;
+          color: #000;
+        }
+      }
+    }
+  }
+}
+.load_cover{
+  position: fixed;
+  top: 0px;
+  background: #1c91d0;
+  z-index: 100;
+   width: 100%;
+   height: 100%;
+   .transparent_block{
+     position:fixed;
+     bottom: 140px;
+     height: 300px;
+     width: 100%;
+     p{
+       position: absolute;
+       top: 150px;
+       left: 50px;
+       color: #fff;
+       font-size: 30px;
+       font-family: hiragino-micyo;
+       line-height: 45px;
+       text-align: center;
+     }
+   }
+  .img_container{
+    position: absolute;
+    top: 30px;
+    left: 0;
+    right: 0;
+    background: url('/assets/sft_logo3.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 50%;
+  }
+}
+
+footer{
+  .admin_footer{
+    li{
+      width: 19.1%;
+    }
+   }
+}

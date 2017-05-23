@@ -1,0 +1,18 @@
+
+<div class="book_main">
+  <h2><%= @book.title %></h2>
+  <ul>
+    <li><%= image_tag (@book.image.thumb.url) %></li>
+    <li class="title"><%= @book.title %></li>
+    <li>著者:<%= @book.author %></li>
+    <li>残り:<%= @book.count%>冊</li>
+    <li class="price">¥<%= @book.price %></li>
+    <%= form_for @log,{ url: logs_path} do |f| %>
+      <%= f.hidden_field :user_id, value: session[:user_id] %>
+      <%= f.hidden_field :book_id , value: params[:id] %>
+      <%= f.hidden_field :count , value: "1" %>
+      <%= f.submit("予約する", class:"submit") %>
+    <% end %>
+  </ul>
+</div>
+<div class="background_box"></div>
