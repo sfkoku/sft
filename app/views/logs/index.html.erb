@@ -1,2 +1,17 @@
-<h1>Logs#index</h1>
-<p>Find me in app/views/logs/index.html.erb</p>
+<h1>予約済み一覧</h1>
+<div class="book_list">
+  <div class="book_container">
+    <% @logs.each do |log| %>
+      <% unless log.book.image.url.nil? %>
+        <div class="container">
+          <a href="<%= book_path(log.book.id) %>">
+            <div class="img_container">
+              <img src="<%= asset_path (log.book.image.thumb.url) %>">
+            </div>
+            <h2><%= log.book.title %></h2>
+          </a>
+        </div>
+      <% end %>
+    <% end %>
+  </div>
+</div>
