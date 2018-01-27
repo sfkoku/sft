@@ -4,6 +4,6 @@ class CategoriesController < ApplicationController
   end
 
   def show
-    @books = Book.where(category_id: params[:id]);
+    @books = Book.where(category_id: params[:id]).where("count > 0");
   end
 end

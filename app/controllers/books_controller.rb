@@ -1,6 +1,7 @@
 class BooksController < ApplicationController
   before_action :set_book
   def show
+    session.delete(:requested_book_id)
     @log = Log.new
   end
 

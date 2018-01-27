@@ -1,6 +1,5 @@
 class Admin::BooksController < AdminController
   before_action :book_params, only:[:create]
-  before_action :admin_check
   before_action :set_book, only:[:show,:edit]
 
   include AdminHelper
@@ -25,6 +24,11 @@ class Admin::BooksController < AdminController
    redirect_to admin_books_path
   end
 
+  def update
+   @book= Book.find(params[:id])
+   @book.update(book_params)  
+   redirect_to admin_book_path(params[:id])
+  end
 
     private
       def set_book
@@ -33,9 +37,5 @@ class Admin::BooksController < AdminController
 
       def book_params
         params.require(:book).permit(:title, :author, :price, :count,:image,:category_id)
-      end
-
-      def admin_check
-        render "/admin/sessions/show" and return unless is_admin?
       end
 end

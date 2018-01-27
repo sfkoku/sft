@@ -1,6 +1,6 @@
 class Admin::LogsController < AdminController
   def index
-    @logs = Log.all
+    @logs = Log.joins(:user)
   end
 
   def show
