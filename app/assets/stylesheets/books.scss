@@ -28,10 +28,13 @@
     .price{
       font-size: 20px;
       margin-bottom: 20px;
+      span{
+        margin-right: 5px;
+      }
     }
   }
 }
-.submit{
+.button_orange{
   font-family :'Yu Mincho',serif;
   font-size: 16px; 
   color: #fff;

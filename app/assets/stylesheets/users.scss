@@ -1,19 +1,29 @@
 // Place all the styles related to the users controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
-
-.user_form_title{
+.user_register_form_container, .user_edit_form_container{
+  margin: 0;
+}
+.user_form_title, .login_form_title{
+  font-size: 24px;
   text-align: center;
   font-weight: 400;
+  padding: 20px 0;
 }
-.user_new_form{
-     display: block;
-     margin: 0 auto;
-     text-align: center;
-   ul, li{
+.user_new_form, .edit_user{
+   display: block;
+   margin: 0 auto;
+   text-align: center;
+   padding-bottom: 30px;
+   ul{
      list-style: none;
+     margin-bottom: 30px;
+     .button-panel{
+       margin-top: 10px;
+     }
    }
-   input{
+   input, select{
+     font-size: 16px;
    }
    input#login-button {
      display: block;
@@ -21,12 +31,21 @@
   }
    label{
     float: left; 
-    width: 80px;
-}
+  }
+  select{
+    width: 100%;
+    height: 50px;
+  }
 }
 
 .user_info_list{
   list-style: none;
   margin-top: 20px;
+  padding: 0 20px;
+  li{
+    width: 100%;
+    padding: 4px;
+    font-size: 16px;
+  }
 }
 
