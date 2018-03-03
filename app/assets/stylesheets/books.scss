@@ -9,12 +9,12 @@
     width: 200px;
     height: auto;
   }
-  h2{
+  .book_title{
     background: #1c91d0;
-    border-bottom: 1px solid #000;
     color: #fff;
     font-size: 20px;
-    line-height: 32px;
+    line-height: 45px;
+    height: 45px;
   }
   ul{
     li{
@@ -24,14 +24,18 @@
     }
     .title{
       font-size: 20px;
+      margin: 5px 0;
     }
     .price{
       font-size: 20px;
       margin-bottom: 20px;
+      span{
+        margin-right: 5px;
+      }
     }
   }
 }
-.submit{
+.button_orange{
   font-family :'Yu Mincho',serif;
   font-size: 16px; 
   color: #fff;

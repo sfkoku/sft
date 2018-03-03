@@ -12,13 +12,18 @@ class UsersController < ApplicationController
   end
 
   def create
-    User.create(user_params)  
-    redirect_to root_path
+    @user =  User.new(user_params)  
+    if @user.save
+      log_in @user
+      redirect_to @user 
+    else
+      render "new"
+    end
   end
 
   def update
     @user.update!(user_params)
-    redirect_to user_path(@user.id)
+    redirect_to @user
   end
 
   private
@@ -27,7 +32,6 @@ class UsersController < ApplicationController
     end
 
     def user_params
-      params.require(:user).permit(:name, :email, :password,:faculty,:year,:department)
+      params.require(:user).permit(:name, :email, :password, :faculty, :year, :department,:password_confirmation,)
     end
-
 end

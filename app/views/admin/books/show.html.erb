@@ -8,7 +8,7 @@
   </thead>
   <tbody>
   <tr>
-    <td><%= link_to @book.title, admin_book_path(@book.id) %></td>
+    <td><%= link_to @book.title, edit_admin_book_path(@book.id) %></td>
     <td><%= @book.author %></td>
     <td><%= @book.price %></td>
     <td><%= @book.count %></td>

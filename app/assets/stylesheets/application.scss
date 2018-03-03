@@ -19,37 +19,45 @@ body,html{
   font-family: 'Hiragino Kaku Gothic Pro', 'ヒラギノ角ゴ Pro W3', "Meiryo", メイリオ, arial, helvetica, sans-serif;
   font-weight: 400;
 }
-.logo{
-  background: #1c91d0; 
-  opacity: 0.9;
+.head{
+  padding: 0;
+  line-height: 45px;
+  height: 45px;
+  color: #fff;
+  background: #1c91d0;
+  font-weight: 400;
 }
 footer{
-  border-top: 1px #999 solid;
+  $footer_height: 40px;
   width: 100%;
-  height: 45px;
+  height: $footer_height; 
   position: fixed;
   bottom: 0;
   background: #ec8e00;
-  padding-top: 5px;
   .head_menu, .admin_footer{
     list-style: none;
+    line-height: $footer_height;
     width: 100%;
     padding: 0;
     position: absolute;
     bottom: 0;
     margin: 0;
+    height: 100%;
     li{
       color: black;
-      line-height: 20px;
-      width: 24%;
+      line-height: $footer_height;
+      width: 24%; 
       margin: 0;
       text-align: center;
       display: inline-block;
       a{
         color: #eee;
         text-decoration: none;;
-        span{
-          font-size: 12px;
+        height: 100%;
+        display: inline-block;
+        i{
+          line-height: $footer_height;
+          height: 100%;
         }
         &:hover{
           text-decoration: underline;;
@@ -96,10 +104,3 @@ footer{
   }
 }
 
-footer{
-  .admin_footer{
-    li{
-      width: 19.1%;
-    }
-   }
-}

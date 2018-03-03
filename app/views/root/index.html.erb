@@ -8,8 +8,12 @@
   <div class="transparent_block">
   </div>
 </div>
-<h3 class="logo"><img src="<%= asset_path("sft_logo3_1.png") %>" width="50" height="40" ></h3>
+<div class="root_header">
+  <img src="<%= asset_path("sft_logo3_1.png") %>">
+  <h1>STUDY FOR TWO</h1>
+</div>
 <%= render :partial => "shared/book_list" , locals: {books: @books}%>
+
 <script>
 $(function(){
     setTimeout(function(){

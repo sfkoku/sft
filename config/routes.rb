@@ -12,6 +12,8 @@ Rails.application.routes.draw do
    delete 'logout'  => 'sessions#destroy'
    namespace :admin do
      resources :books
-     resources :logs, only: [:index,:show,:update,:destroy]
+     resources :logs, only: [:index,:show,:update,:destroy] do
+       post 'toggle_confirm'
+     end
    end
 end

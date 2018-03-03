@@ -1,0 +1,8 @@
+
+<%= form_for log, { url: admin_log_path(log.id)} do |f| %> 
+  <%= f.hidden_field :user_id, value: session[:user_id] %>
+  <%= f.hidden_field :book_id , value: log.book.id %>
+  <%= f.hidden_field :count , value: log.book.count %>
+  <%= f.hidden_field :is_processed, value: log.is_processed %>  
+  <%= f.submit("確認反転する", class:"button_orange") %>
+<% end %>
