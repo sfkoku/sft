@@ -2,7 +2,7 @@
   <% session[:requested_book_id] = @book.id %>
 <% end %>
 <div class="book_main">
-  <h2><%= @book.title %></h2>
+  <h2 class='book_title'><%= @book.title %></h2>
   <ul>
     <li><%= image_tag (@book.image.thumb.url) %></li>
     <li class="title"><%= @book.title %></li>

@@ -19,6 +19,14 @@ body,html{
   font-family: 'Hiragino Kaku Gothic Pro', 'ヒラギノ角ゴ Pro W3', "Meiryo", メイリオ, arial, helvetica, sans-serif;
   font-weight: 400;
 }
+.head{
+  padding: 0;
+  line-height: 45px;
+  height: 45px;
+  color: #fff;
+  background: #1c91d0;
+  font-weight: 400;
+}
 footer{
   $footer_height: 40px;
   width: 100%;

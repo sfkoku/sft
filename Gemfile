@@ -8,7 +8,9 @@ end
 gem 'dotenv-rails'
 gem 'carrierwave'
 gem 'rmagick'
-gem "font-awesome-rails"
+gem "unicorn"
+gem 'slim-rails'
+
 
 gem "font-awesome-rails"
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'

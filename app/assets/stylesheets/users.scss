@@ -38,14 +38,26 @@
   }
 }
 
+#mypage_head{
+  font-size: 25px;
+}
 .user_info_list{
   list-style: none;
-  margin-top: 20px;
+  margin-top: 50px;
   padding: 0 20px;
   li{
     width: 100%;
     padding: 4px;
     font-size: 16px;
+  }
+}
+
+.user_links{
+  margin-top: 30px;
+  padding: 0 20px;
+  a, &:hover, &:visited{
+    text-decoration: none;
+    color: #111;
   }
 }
 

@@ -1,0 +1,10 @@
+h1.head 予約済み一覧
+div.book_list
+  div.book_container
+    - @logs.each do |log| 
+      - if log.book
+        - unless log.book.image.url.nil?
+          div.container
+            =link_to book_path(log.book.id) do
+              div.img_container style="background-image: url(#{asset_path (log.book.image.thumb.url)})"
+              h2 #{log.book.title}
