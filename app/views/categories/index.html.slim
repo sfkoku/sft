@@ -1,0 +1,6 @@
+div.categories_block
+  ul
+    li カテゴリー一覧
+  - @categories.each do |ca| 
+    =link_to(category_path(ca.id)) do
+      li #{ca.name}

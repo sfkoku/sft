@@ -6,6 +6,7 @@
       <th>タイトル</th>
       <th>個数</th>
       <th>確認済み</th>
+      <th>確認済み</th>
     </tr>
     <% logs.each do |log| %>
       <tr>
@@ -14,9 +15,12 @@
       <% end %>
       </td>
       <td><%= log.user.email %></td>
-      <td><%= log.book.title %></td>
-      <td><%= log.count %></td>
-      <td><%= log.is_processed %></td>
+      <% if log.book.present? %>
+        <td><%= log.book.title %></td>
+        <td><%= log.count %></td>
+        <td><%= log.is_processed %></td>
+        <td><%= render partial: "/shared/toggle_confirm_form", locals: {log:log} %>
+      <% end %>
     </tr>
   <% end %>
   </table>

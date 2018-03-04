@@ -3,12 +3,17 @@ Rails.application.routes.draw do
    #For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
    root 'root#index'
    resources :books, only: [:show]
-   resources :users
+   resources :users do
+     resources :logs, only: [:create, :index]
+   end
    resources :categories, only: [:index,:show]
-   resources :logs, only: [:create]
+   get    'login'   => 'sessions#new'
+   post   'login'   => 'sessions#create'
+   delete 'logout'  => 'sessions#destroy'
    namespace :admin do
      resources :books
-     resources :sessions, only:[:show,:create,:destroy]
-     resources :logs, only: [:index,:show,:update,:destroy]
+     resources :logs, only: [:index,:show,:update,:destroy] do
+       post 'toggle_confirm'
+     end
    end
 end

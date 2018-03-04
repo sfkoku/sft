@@ -1,4 +1,5 @@
 class Category < ApplicationRecord
+  has_many :books
 
   def self.all_ary
     ary = [] 

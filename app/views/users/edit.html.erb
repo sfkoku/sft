@@ -1,10 +1,7 @@
 
-<ul class="book_new_form">
+<div class="form-wrapper user_edit_form_container">
+  <h1 class="user_form_title">登録情報変更</h1>
   <%= form_for @user, url: {action: "update"} do |f| %>
-  <li>名前：<%= f.text_field :name %></li>
-  <li>password：<%= f.password_field :password %></li>
-  <li>email：<%= f.text_field :email%></li>
-  <li>学年：<%= f.text_field :year %></li>
-  <li><%= f.submit %></li>
-<% end %>
-</ul>
+    <% render partial: "shared/user_register_form",locals: {f:f} %>
+  <% end %>
+</div>

@@ -1,0 +1,8 @@
+div.book_list
+  div.book_container
+    - books.each do |book| 
+      - unless book.image.url.nil?
+        div.container
+          =link_to book_path(book.id) do
+            div.img_container style="background-image: url(#{asset_path (book.image.thumb.url)})"
+            h2 #{book.title}
