@@ -1,26 +1,24 @@
 class Admin::LogsController < AdminController
   def index
-    @logs = Log.joins(:user)
+    #未対応のものだけ
+    @logs = Log.where(is_processed: 0).joins(:user)
   end
 
   def show
-    @log = Log.where(id: params[:id])
+    @log = Log.find(params[:id])
   end
 
   def update
    log = Log.find_by(id: params[:id]) 
    if params[:log][:is_processed] == "x"
      log.update_attributes!(is_processed: 1)  
-     redirect_to admin_logs_path and return
+     redirect_to admin_log_path(params[:id]) and return
    end
    log.update_attributes!(is_processed: 0)  
-   redirect_to admin_logs_path
+   redirect_to admin_log_path(params[:id])
   end
 
   def destroy
-  end
-
-  def toggle_confirm
   end
 
     private 
