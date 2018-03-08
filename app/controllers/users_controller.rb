@@ -2,6 +2,9 @@ class UsersController < ApplicationController
   before_action :set_user, only: [:show,:edit,:update]
 
   def show
+    unless params[:id].to_i == current_user.id 
+      redirect_to user_path(current_user.id)
+    end
   end
 
   def edit
@@ -33,6 +36,6 @@ class UsersController < ApplicationController
     end
 
     def user_params
-      params.require(:user).permit(:name, :email, :password, :faculty, :year, :department,:password_confirmation,)
+      params.require(:user).permit!
     end
 end
