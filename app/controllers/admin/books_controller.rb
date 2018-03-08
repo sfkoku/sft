@@ -27,7 +27,7 @@ class Admin::BooksController < AdminController
   def update
    @book= Book.find(params[:id])
    @book.update(book_params)  
-   redirect_to admin_book_path(params[:id])
+   redirect_to admin_book_path(params[:id]), notice: "更新しました"
   end
 
     private
@@ -36,6 +36,6 @@ class Admin::BooksController < AdminController
       end
 
       def book_params
-        params.require(:book).permit(:title, :author, :price, :count,:image,:category_id)
+        params.require(:book).permit!
       end
 end
