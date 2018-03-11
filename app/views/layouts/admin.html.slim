@@ -1,0 +1,26 @@
+head
+  = csrf_meta_tags
+  meta name="viewport" content="width=device-width,initial-scale=1" 
+  = stylesheet_link_tag    'application', media: 'all'
+  = javascript_include_tag 'application'
+  = javascript_include_tag 'jquery'
+
+= render partial: 'shared/flash'
+
+= yield
+
+footer 
+  ul.admin_footer
+    li
+      = link_to(root_path) do
+        =fa_icon "2x home"
+    li
+      = link_to(admin_books_path) do
+        = fa_icon "2x list"
+    li 
+      = link_to(admin_logs_path) do 
+        = fa_icon "2x book"
+    li 
+      = link_to(new_admin_book_path) do
+        = fa_icon "2x plus"
+

@@ -1,0 +1,13 @@
+
+-if flash[:notice]
+table
+  tr
+    th タイトル 
+    th 著者
+    th 値段
+    th 個数
+  tr
+    td = link_to @book.title, edit_admin_book_path(@book.id)
+    td = @book.author
+    td = @book.price
+    td = @book.count
