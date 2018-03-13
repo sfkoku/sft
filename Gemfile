@@ -11,6 +11,7 @@ gem 'rmagick'
 gem "unicorn"
 gem 'slim-rails'
 gem 'gretel'
+gem 'kaminari'
 
 
 gem "font-awesome-rails"
