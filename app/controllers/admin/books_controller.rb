@@ -27,7 +27,7 @@ class Admin::BooksController < AdminController
   def update
    @book= Book.find(params[:id])
    @book.update(book_params)  
-   redirect_to admin_book_path(params[:id]), notice: "更新しました"
+   redirect_to admin_books_path, notice: "更新しました"
   end
 
     private
