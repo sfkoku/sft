@@ -11,6 +11,7 @@ div.root_header
   img src="#{asset_path("sft_logo3_1.png")}"
   h1 STUDY FOR TWO
 = render :partial => "shared/book_list", locals: {books: @books}
+= paginate @books
 
 javascript:
   $(function(){
