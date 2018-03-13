@@ -145,3 +145,33 @@ footer{
     }
   }
 }
+
+
+.pagination{
+  margin: 10px auto 80px;
+  text-align: center;
+  padding-left: 20px;
+  span{
+    background: #1c91d0;
+    padding: 10px;
+    margin-right: 5px;
+    margin-left: 5px;
+    color: #fff;
+    a{
+      text-decoration: none;
+      color: #fff;
+      &:visited, &:hover{
+        color: #fff;
+      }
+    }
+  }
+  .prev, .next{
+    background:   #fff; 
+    a{
+      color: #000;
+      &:visited, &:hover{
+        color: #000;
+      }
+    }
+  }
+}
