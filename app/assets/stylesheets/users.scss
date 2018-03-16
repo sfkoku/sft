@@ -57,11 +57,41 @@
 }
 
 .user_links{
-  margin-top: 30px;
+  font-size: 14px;
+  margin-top: 20px;
   padding: 0 20px;
   a, &:hover, &:visited{
+    font-size: 14px; 
     text-decoration: none;
-    color: #111;
+    color: #fff;
+    height: 40px;
+    padding: 10px;
+    box-sizing: border-box;
+    display: inline-block;
+  }
+  .logout_button{
+    margin-top: 10px;
+    font-family: 'Yu Mincho', "Meiryo", メイリオ, arial, helvetica, sans-serif;
+    font-size: 14px; 
+    color: #fff;
+    padding: 10px;
+    text-decoration: none;
+    background: #1c91d0;
+    border: none;
+    border-radius: 20px; 
+  }
+}
+
+.official_link_container{
+  padding: 30px 20px;
+  font-size: 14px;
+  a{
+    color: #5e5e5e;
+    text-decoration: none;
+    &:hover, &:visited{
+      color: #5e5e5e;
+      text-decoration: none;
+    }
   }
 }
 
