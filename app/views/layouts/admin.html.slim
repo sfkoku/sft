@@ -5,7 +5,8 @@ head
   = javascript_include_tag 'application'
   = javascript_include_tag 'jquery'
 
-= render partial: 'shared/flash'
+- if flash.present?
+  = render partial: 'shared/flash'
 
 = yield
 
