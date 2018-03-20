@@ -1,7 +1,8 @@
 class Admin::LogsController < AdminController
   def index
     #未対応のものだけ
-    @logs = Log.where(is_processed: 0).joins(:user)
+    @no_check_logs = Log.where(is_processed: 0).joins(:user)
+    @check_logs = Log.where(is_processed: 1).joins(:user)
   end
 
   def show
