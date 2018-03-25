@@ -1,7 +1,6 @@
 module CategoriesHelper
 
   def books_or_not
-    p @books
     if @books.empty?
      render partial: "shared/no_book" 
     else
