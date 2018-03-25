@@ -2,33 +2,93 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 .admin_reserve_container, .admin_book_index{
-   h2{
-     margin: 5px 0;
-     padding: 5px;
-   }
+  width: 100%;
+  padding: 15px 10px;
+  margin-bottom: 50px;
+  h2{
+    margin: 5px 0;
+    padding: 5px;
+  }
+  .admin_logs_tab{
+    li{
+      display: -webkit-box;
+      display: -moz-box;
+      display: -webkit-flexbox;
+      display: -moz-flexbox;
+      display: -ms-flexbox;
+      display: -webkit-flex;
+      display: -moz-flex;
+      display: inline-flex;
+      -webkit-box-orient:horizontal;
+      -moz-box-orient:horizontal;
+      box-orient: horizontal;
+      -ms-flex-direction:row;
+      -webkit-flex-direction:row;
+      -moz-flex-direction:row;
+      flex-direction:row;
+      width: 50%;
+      padding: 3px;
+      margin-bottom: 10px;
+    }
+  }
+  .show_tab{
+    color: #dfcacc;
+  }
 }
-  .admin_logs_index, .admin_books{
-    width: 95%;
-    margin: 10px auto; 
-    th{
-      font-size: 14px;
-      padding: 5px;
-    }
-    td{
-      text-align: center;
-    }
+.admin_logs_index, .admin_logs_show, .admin_books{
+  width: 95%;
+  margin: 0; 
+  tr{
+    height: 30px;
   }
-  .edit_log{
+  th{
+    font-size: 16px;
+    padding: 5px;
+  }
+  td{
     text-align: center;
-    input{
-      margin: 15px 0;
-      font-size: 14px;
-      font-family :'Yu Mincho',serif;
-      color: #fff;
-      padding: 10px 10px;
+    a, &:visited{
       text-decoration: none;
-      background: #ec8e00;
-      border: none;
-      border-radius: 20px; 
+      color: #5e5e5e;
     }
   }
+  .book_time{
+    font-size: 12px;
+  }
+}
+.admin_logs_show{
+  margin: 30px auto; 
+  margin-bottom: 10px;
+  th{
+    font-size: 12px;
+    padding: 5px;
+  }
+  td{
+    text-align: center;
+    a{
+      text-decoration: none;
+    }
+  }
+}
+.edit_log{
+  text-align: center;
+  input{
+    margin: 15px 0;
+    font-size: 14px;
+    font-family :'Yu Mincho',serif;
+    color: #fff;
+    padding: 10px 10px;
+    text-decoration: none;
+    background: #ec8e00;
+    border: none;
+    border-radius: 20px; 
+  }
+}
+.logs_show{
+   text-align: center;
+  .admin_logs_button{
+    text-decoration: none;
+    color: #5e5e5e;
+    margin: 0 auto;
+  }
+}

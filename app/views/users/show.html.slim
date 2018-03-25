@@ -6,13 +6,21 @@ ul.user_info_list
   li 学科 #{@user.department} 
   li 学年 #{@user.year}年
   li email #{@user.email} 
+  - if @user.tw_name.present?
+    li twitter @#{@user.tw_name} 
 
 .user_links
-  =fa_icon "link"
-  =link_to "登録情報変更", edit_user_path(params[:id])
+  =link_to "登録情報変更", edit_user_path(params[:id]), class: "button_orange"
   br
-  =fa_icon "link"
-  =link_to(logout_path(params[:id]), :method =>"delete", :action => 'delete') do 
+  =link_to(logout_path(params[:id]), class: "logout_button", :method =>"delete", :action => 'delete') do 
     span ログアウト
+.official_link_container
+  = link_to("http://studyfortwo.org/about/", class: 'sft_link')  do
+    = fa_icon 'link'
+    | SFTについて
+    br
+  = link_to('https://twitter.com/sftkoku', class: 'sft_tw_link') do
+    = fa_icon 'twitter'
+    | SFT國學院支部
 
-=link_to "管理画面", admin_books_path
+= link_to "管理画面", admin_books_path

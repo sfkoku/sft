@@ -1,0 +1,34 @@
+
+div.load_cover
+  div.img_container
+  -if flash.present?
+    div.errors
+      -flash.each do |key, value| 
+        =content_tag(:div, value, class: "#{key}") 
+  div.transparent_block
+
+div.root_header
+  img src="#{asset_path("sft_logo3_1.png")}"
+  h1 STUDY FOR TWO
+
+= form_tag(root_path, method: "get", class: "search_form") do 
+  = text_field_tag :title, params[:title], placeholder: "教科書名で検索"
+  = button_tag type: "submit", class: 'submit_btn' do 
+    = fa_icon 'search lg'
+
+-if @books.count == 0
+  = render :partial => "shared/result_no_book"
+-else
+  = render :partial => "shared/book_list", locals: {books: @books}
+= paginate @books
+
+javascript:
+  if(!(location.search.match(/title/))) {
+    $(function(){
+        setTimeout(function(){
+          $('.load_cover').fadeOut('slow');
+        },700);
+     });
+  }else{
+    $('.load_cover').hide()
+  }

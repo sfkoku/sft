@@ -2,7 +2,11 @@ class BooksController < ApplicationController
   before_action :set_book
   def show
     session.delete(:requested_book_id)
-    @log = Log.new
+    if log = Log.get_current_user_log(current_user.id, params[:id]).first
+      @log = log
+    else
+      @log = Log.new
+    end
   end
 
   private

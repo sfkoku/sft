@@ -1,0 +1,36 @@
+h1.head 予約管理
+div.admin_reserve_container
+  ul.admin_logs_tab
+    li.no_check.show_tab 未対応
+    li.check 対応済み
+  table.admin_logs_index.no_check_tab
+    tr
+      th ユーザー名
+      th 予約日時 
+    - @no_check_logs.each do |log| 
+      tr
+        td = link_to(admin_log_path(log.id)) { log.user.name }
+        td.book_time = log.book_time
+  table.admin_logs_index.check_tab
+    tr
+      th ユーザー名
+      th 予約日時 
+    - @check_logs.each do |log| 
+      tr
+        td = link_to(admin_log_path(log.id)) { log.user.name }
+        td.book_time = log.book_time
+
+javascript:
+  $('.check_tab').hide();
+  $(".no_check").click(function(){
+    $('.check_tab').hide();
+    $('.no_check_tab').show();
+  })
+  $(".check").click(function(){
+    $('.no_check_tab').hide();
+    $('.check_tab').show();
+  })
+  $('li').click(function(){
+    $('.no_check').toggleClass('show_tab');
+    $('.check').toggleClass('show_tab');
+  })

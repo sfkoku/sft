@@ -1,0 +1,13 @@
+div.book_edit_container
+  div.img_container
+    = image_tag(@book.image.url)
+
+  ul.book_new_form
+    = form_for @book, url: {action: "update"} do |f|
+      li タイトル：#{ f.text_field :title}
+      li 著者：#{f.text_field :author}
+      li 値段：#{f.text_field :price}
+      li カテゴリー:#{f.select :category_id , Category.all_ary}
+      li 個数：#{f.text_field :count}
+      li 公開設定：#{f.select :is_published, [["公開", 1], ["非公開", 0]]}
+      li = f.submit

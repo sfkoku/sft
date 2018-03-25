@@ -15,6 +15,12 @@ class LogsController < ApplicationController
     redirect_to login_path
   end
 
+  def destroy 
+    @log = Log.find(params[:id])
+    @log.destroy
+    redirect_to root_path
+  end
+
   private
     def log_params
       params.require(:log).permit(:user_id, :book_id,:count)
