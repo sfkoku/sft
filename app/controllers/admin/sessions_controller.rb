@@ -1,5 +1,4 @@
 class Admin::SessionsController < AdminController
-  skip_before_action :admin_check
   include AdminHelper
 
   def show
