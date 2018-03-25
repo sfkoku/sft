@@ -2,7 +2,6 @@ class Book < ApplicationRecord
   mount_uploader :image, ImageUploader
   has_many :logs, dependent: :destroy
   belongs_to :category
-
   scope :get_by_title, ->(title){
     where("title like ?", "%#{title}%")
   }

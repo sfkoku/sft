@@ -13,7 +13,8 @@ div.root_header
 
 = form_tag(root_path, method: "get", class: "search_form") do 
   = text_field_tag :title, params[:title], placeholder: "教科書名で検索"
-  = submit_tag =fa_icon 'lg search', class:'submit_btn'
+  = button_tag type: "submit", class: 'submit_btn' do 
+    = fa_icon 'search lg'
 
 -if @books.count == 0
   = render :partial => "shared/result_no_book"
