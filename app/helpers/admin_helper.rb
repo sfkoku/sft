@@ -5,16 +5,9 @@ module AdminHelper
   end
 
   def is_administrator?
-    session[:admin].present?
-  end
-
-  private
-
-    USERS = { ENV['USERNAME'] => ENV['SECRET'] }
-    def digest_auth
-        authenticate_or_request_with_http_digest do |user|
-          USERS[user]
-        end
+    unless session[:admin].present? && session[:admin] == ENV['ADMIN_EMAIL']
+      redirect_to root_path
     end
+  end
 
 end
