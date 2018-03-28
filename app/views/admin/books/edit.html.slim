@@ -4,10 +4,23 @@ div.book_edit_container
 
   ul.book_new_form
     = form_for @book, url: {action: "update"} do |f|
-      li タイトル：#{ f.text_field :title}
-      li 著者：#{f.text_field :author}
-      li 値段：#{f.text_field :price}
-      li カテゴリー:#{f.select :category_id , Category.all_ary}
-      li 個数：#{f.text_field :count}
-      li 公開設定：#{f.select :is_published, [["公開", 1], ["非公開", 0]]}
-      li = f.submit
+      li 
+        = f.label :title, "タイトル"
+        = f.text_field :title
+      li
+        = f.label :author, "著者"
+        = f.text_field :author
+      li
+        = f.label :price, "値段"
+        = f.text_field :price
+      li
+        = f.label :category_id, "カテゴリー"
+        = f.select :category_id , Category.all_ary
+      li
+        = f.label :count, "個数"
+        = f.text_field :count
+      li
+        = f.label :is_published, "公開可否"
+        = f.select :is_published, [["公開", 1], ["非公開", 0]]
+      li
+        = f.submit

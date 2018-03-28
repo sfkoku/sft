@@ -166,12 +166,16 @@ footer{
     }
   }
   .prev, .next{
-    background:   #fff; 
+    background: #fff; 
     a{
       color: #000;
       &:visited, &:hover{
         color: #000;
       }
     }
+  }
+  .current{
+    background: #fff;     
+    color: #5e5e5e;
   }
 }
