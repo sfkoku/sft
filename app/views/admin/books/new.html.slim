@@ -1,0 +1,22 @@
+ul.book_new_form
+  = form_for @admin_book, url: {action: "create"} do |f|
+    li
+      = f.label :title, "タイトル"
+      = f.text_field :title
+    li
+      = f.label :image, "画像"
+      = f.file_field :image
+    li
+      = f.label :author, "著者"
+      = f.text_field :author
+    li
+      = f.label :price, "値段"
+      = f.text_field :price
+    li
+      = f.label :category_id, "カテゴリー"
+      = f.select :category_id , Category.all_ary
+    li
+      = f.label :count, "個数"
+      = f.text_field :count
+    li
+      = f.submit
