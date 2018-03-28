@@ -23,7 +23,7 @@ div.root_header
 = paginate @books
 
 javascript:
-  if(!(location.search.match(/title/))) {
+  if(!(location.search.match(/title/) || location.search.match(/page/))) {
     $(function(){
         setTimeout(function(){
           $('.load_cover').fadeOut('slow');

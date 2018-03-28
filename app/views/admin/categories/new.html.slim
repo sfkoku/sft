@@ -1,0 +1,7 @@
+ul.category_new_form
+  = form_for @category, url: {action: "create"} do |f|
+    li.li_flex
+      = f.label :name, "カテゴリ名"
+      = f.text_field :name
+    li
+      = f.submit
