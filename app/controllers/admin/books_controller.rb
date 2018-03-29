@@ -1,6 +1,6 @@
 class Admin::BooksController < AdminController
   before_action :book_params, only:[:create]
-  before_action :set_book, only:[:show,:edit]
+  before_action :set_book, only:[:show, :edit, :update, :destroy]
 
   include AdminHelper
 
@@ -28,6 +28,14 @@ class Admin::BooksController < AdminController
    @book= Book.find(params[:id])
    @book.update(book_params)  
    redirect_to admin_books_path, notice: "更新しました"
+  end
+
+  def destroy
+    if @book.delete
+      redirect_to admin_books_path, notice: "削除しました"
+    else
+      redirect_to admin_books_path, notice: "削除できませんでした"
+    end
   end
 
     private
