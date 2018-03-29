@@ -23,4 +23,6 @@ div.book_edit_container
         = f.label :is_published, "公開可否"
         = f.select :is_published, [["公開", 1], ["非公開", 0]]
       li
-        = f.submit
+        = f.submit("更新する")
+      li
+        = link_to "削除する", admin_book_path(@book.id), class: "cancel_button", method: :delete 
