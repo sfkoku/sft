@@ -5,7 +5,7 @@ module AdminHelper
   end
 
   def is_administrator?
-    unless current_user.email == ENV['ADMIN_EMAIL']
+    unless current_user.present? && current_user.email == ENV['ADMIN_EMAIL']
       redirect_to root_path
     end
   end
