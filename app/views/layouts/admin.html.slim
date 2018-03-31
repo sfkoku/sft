@@ -5,23 +5,21 @@ head
   = javascript_include_tag 'application'
   = javascript_include_tag 'jquery'
 
-- if flash.present?
-  = render partial: 'shared/flash'
+body
+  = render "shared/flash"
+  = yield
 
-= yield
-
-footer 
-  ul.admin_footer
-    li
-      = link_to(root_path) do
-        =fa_icon "2x home"
-    li
-      = link_to(admin_books_path) do
-        = fa_icon "2x list"
-    li 
-      = link_to(admin_logs_path) do 
-        = fa_icon "2x book"
-    li 
-      = link_to(new_admin_book_path) do
-        = fa_icon "2x plus"
-
+  footer 
+    ul.admin_footer
+      li
+        = link_to(root_path) do
+          =fa_icon "2x home"
+      li
+        = link_to(admin_books_path) do
+          = fa_icon "2x list"
+      li 
+        = link_to(admin_logs_path) do 
+          = fa_icon "2x book"
+      li 
+        = link_to(new_admin_book_path) do
+          = fa_icon "2x plus"
