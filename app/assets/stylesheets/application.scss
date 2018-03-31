@@ -123,13 +123,16 @@ footer{
 }
 
 .errors{
+  position: absolute;
+  top: 0px;
   padding: 20px;
+  width: 100%;
   text-align: center;
-  color: #ddd;
+  background: #1c91d0;
+  color: #fff;
+  font-size: 16px;
+  z-index: 10000;
   .notice{
-    background: #1c91d0;
-    position: absolute;
-    top: 0;
   }
 }
 

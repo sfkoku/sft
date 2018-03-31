@@ -16,9 +16,12 @@ class LogsController < ApplicationController
   end
 
   def destroy 
-    @log = Log.find(params[:id])
-    @log.destroy
-    redirect_to root_path
+    @log = Log.find_by(id: params[:id])
+    if @log.present? && @log.destroy
+      redirect_to root_path, notice: '削除しました。'
+    else
+      redirect_to user_logs_path(current_user.id), alert: "削除できませんでした。"
+    end
   end
 
   private
