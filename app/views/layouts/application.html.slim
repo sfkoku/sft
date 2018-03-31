@@ -8,7 +8,7 @@ html
     = stylesheet_link_tag    'application', media: 'all'
     = javascript_include_tag 'application', 'data-turbolinks-track': 'reload'
   body
-    .bottom_fixed
+    div.bottom_fixed
     = render "shared/flash"
     = yield
     footer
