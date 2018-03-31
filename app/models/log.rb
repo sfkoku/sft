@@ -11,4 +11,10 @@ class Log < ApplicationRecord
   def book_time
     (self.created_at + 9.hours).strftime("%Y/%m/%d %H:%M")
   end
+
+  private
+    after_destroy{
+      self.book.count += 1
+      self.book.save
+    }
 end
