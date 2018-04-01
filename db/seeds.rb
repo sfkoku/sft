@@ -6,11 +6,11 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 20.times do
-  Book.create(title: "新しいやつ",
-              author: "利光",
+  Book.create(title: "テスト",
+              author: "テスト著者",
               price: 10000,
-              category_id: 3,
-              count: 5,
-              image: open("#{Rails.root}/public/uploads/book/image/20/8CE08AC0-0029-4354-A3E8-F09035C901EE.jpeg"), 
+              category_id: 1,
+              count: 1,
+              image: open("#{Rails.root}/public/uploads/book/test.jpg"), 
               is_published: true)
 end
