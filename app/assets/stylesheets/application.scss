@@ -153,7 +153,6 @@ footer{
 .pagination{
   margin: 10px auto 80px;
   text-align: center;
-  padding-left: 20px;
   span{
     background: #1c91d0;
     padding: 10px;
@@ -168,7 +167,7 @@ footer{
       }
     }
   }
-  .prev, .next{
+  .first, .last{
     background: #fff; 
     a{
       color: #000;
