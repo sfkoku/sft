@@ -137,14 +137,15 @@ footer{
 }
 
 .breadcrumbs{
-  margin-top: 5px;
-  margin-left: 5px;
+  margin-top: 10px;
+  margin-left: 10px;
   text-align: left;
   font-size: 12px;
   a{
+    color: #1c91d0;
     text-decoration: none;
     &:hover, &:visited{
-      color: #5e5e5e;
+      color: #1c91d0;
     }
   }
 }
