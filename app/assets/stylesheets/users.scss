@@ -60,14 +60,17 @@
   font-size: 14px;
   margin-top: 20px;
   padding: 0 20px;
-  a, &:hover, &:visited{
+  a{
+    height: 40px;
+    padding: 10px;
     font-size: 14px; 
     text-decoration: none;
     color: #fff;
-    height: 40px;
-    padding: 10px;
     box-sizing: border-box;
     display: inline-block;
+    &:hover, &:visited{
+      color: #fff;
+    }
   }
   .logout_button{
     margin-top: 10px;

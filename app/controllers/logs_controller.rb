@@ -18,9 +18,9 @@ class LogsController < ApplicationController
   def destroy 
     @log = Log.find_by(id: params[:id])
     if @log.present? && @log.destroy
-      redirect_to root_path, notice: '削除しました。'
+      redirect_to root_path, notice: '予約をキャンセルしました。'
     else
-      redirect_to user_logs_path(current_user.id), alert: "削除できませんでした。"
+      redirect_to user_logs_path(current_user.id), alert: "キャンセルできませんでした。"
     end
   end
 
