@@ -1,17 +1,15 @@
 
-table.admin_logs_show
-  tr
-    th ユーザー名
-    th mail| twitter
-    th 個数
-    th 確認済み
-  tr
-    td  = log.user.name 
-    - if log.user.tw_name.present?
-      td 
-        a href="http://twitter.jp/#{log.user.tw_name}" @#{log.user.tw_name}
-    - else 
-      td = log.user.email
-    - if log.book.present?
-      td = log.count 
-      td = log.is_processed 
+ul.admin_logs_show
+  li ユーザー名
+  li = log.user.name
+  li mail| twitter 
+  - if log.user.tw_name.present?
+    li 
+      a href="http://twitter.jp/#{log.user.tw_name}" @#{log.user.tw_name}
+  - else 
+    li = log.user.email
+  - if log.book.present?
+    li 教科書名
+    li = log.book.title
+    li 値段
+    li ¥#{log.book.price}
