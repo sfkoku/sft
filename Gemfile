@@ -12,6 +12,8 @@ gem "unicorn"
 gem 'slim-rails'
 gem 'gretel'
 gem 'kaminari'
+gem 'meta-tags'
+gem 'config'
 
 gem "font-awesome-rails"
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
