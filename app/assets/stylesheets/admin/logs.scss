@@ -91,6 +91,21 @@
   .admin_logs_button{
     text-decoration: none;
     color: #5e5e5e;
-    margin: 0 auto;
+    margin: 30px auto;
+    display: block;
+    width: 120px;
+  }
+  .admin_logs_delete_button{
+    width: 150px;
+    font-family: 'Yu Mincho',serif;
+    font-size: 16px;
+    color: #fff;
+    padding: 10px 30px;
+    margin: 5px auto;
+    text-decoration: none;
+    background: #ff5f47;
+    border: none;
+    border-radius: 20px; 
+    display: block;
   }
 }
